@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/archives', function () {
+    return '記事一覧';
+});
+Route::get('/archives/{category}', function ($category) {
+    return $category . 'の記事';
+});
