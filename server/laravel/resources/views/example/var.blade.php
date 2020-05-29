@@ -7,5 +7,10 @@
 <body>
     <p>「varを表示」：<?php echo $var; ?> </p>
     <p>→ブレード使用： {{ $var }} </p>
+
+    @if ($var == 'php')
+        <h1>PHPやで！！</h1>
+        <p>{{ $var }}</p>
+    @endif
 </body>
 </html>

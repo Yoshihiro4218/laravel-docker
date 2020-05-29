@@ -29,5 +29,5 @@ Route::get('/index', function () {
     return view('index');
 });
 Route::get('/variable/{var}', function ($var) {
-    return view('var', ['var' => $var]);
+    return view('example.var', ['var' => $var]);
 });
