@@ -22,3 +22,9 @@ Route::get('/archives', function () {
 Route::get('/archives/{category}', function ($category) {
     return $category . 'の記事';
 });
+Route::get('/example', function () {
+    return redirect() -> to('/');
+});
+Route::get('/index', function () {
+    return view('index');
+});
