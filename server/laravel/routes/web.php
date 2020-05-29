@@ -28,3 +28,6 @@ Route::get('/example', function () {
 Route::get('/index', function () {
     return view('index');
 });
+Route::get('/variable/{var}', function ($var) {
+    return view('var', ['var' => $var]);
+});
