@@ -31,3 +31,8 @@ Route::get('/index', function () {
 Route::get('/variable/{var}', function ($var) {
     return view('example.var', ['var' => $var]);
 });
+
+Route::get('/sum/{x}/{y}', function ($x, $y) {
+    return view('sum', ['x' => $x, 'y' => $y]);
+});
+Route::get('/math/{x}/{y}', 'MathController@sum');
