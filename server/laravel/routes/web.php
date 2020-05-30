@@ -36,3 +36,4 @@ Route::get('/sum/{x}/{y}', function ($x, $y) {
     return view('sum', ['x' => $x, 'y' => $y]);
 });
 Route::get('/math/{x}/{y}', 'MathController@sum');
+Route::get('/count', 'CountController@index');
