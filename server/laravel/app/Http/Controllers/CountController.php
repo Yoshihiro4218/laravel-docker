@@ -11,7 +11,10 @@ use Illuminate\Support\Facades\DB;
 
 class CountController extends BaseController {
     public function index() {
-        $count = DB::select("SELECT count FROM access_count WHERE id = 1");
-        return View::make('count', ['count' => $count]);
+        $obj = DB::select('SELECT count FROM access_count WHERE id = 1');
+        $count = $obj[0] -> count;
+        $count ++
+        //DB::update('UPDATE access_count SET count = ? WHERE id = 1', [$count]);
+        return View::make('count', ['count' => count]);
     }
 }
